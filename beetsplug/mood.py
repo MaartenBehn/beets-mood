@@ -2,16 +2,16 @@ from beets.plugins import BeetsPlugin
 import musicbrainzngs
 import re
 
-class LidarrFieldsPlugin(BeetsPlugin):
+class MoodsWriterPlugin(BeetsPlugin):
   def __init__(self):
-    super(LidarrFieldsPlugin, self).__init__()
+    super(MoodsWriterPlugin, self).__init__()
     
     self.mood = None
     
     self.template_fields['mood'] = self._tmpl_mood
 
   def _tmpl_mood(self, item):
-    mood = ""
+    mood = "unknown"
     factor = 0.0 
     min_mood = 0.5
 
