@@ -14,7 +14,7 @@ from setuptools import find_packages, setup, Command
 # Package meta-data.
 NAME = 'beets-mood-writer'
 DESCRIPTION = ''
-URL = 'https://github.com/rafaelparente/beets-lidarr-fields'
+URL = 'https://github.com/MaartenBehn/beets-mood'
 EMAIL = 'maarten.behn@gmail.com'
 AUTHOR = 'Maarten Behn'
 REQUIRES_PYTHON = '>=3.4.0'
