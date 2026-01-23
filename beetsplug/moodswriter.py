@@ -1,6 +1,7 @@
 from beets.plugins import BeetsPlugin
 import musicbrainzngs
 import re
+import mediafile
 
 class MoodsWriterPlugin(BeetsPlugin):
   def __init__(self):
@@ -9,6 +10,11 @@ class MoodsWriterPlugin(BeetsPlugin):
     self.mood = None
     
     self.template_fields['mood'] = self._tmpl_mood
+
+    field = mediafile.MediaField(
+        mediafile.MP3DescStorageStyle("mood"), mediafile.StorageStyle("mood")
+    )
+    self.add_media_field("mood", field)
 
   def _tmpl_mood(self, item):
     mood = "unknown"
