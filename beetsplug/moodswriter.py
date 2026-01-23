@@ -12,11 +12,10 @@ class MoodsWriterPlugin(BeetsPlugin):
     self.template_fields['mood'] = self._tmpl_mood
 
     field = mediafile.MediaField(
-        mediafile.VorbisImageStorageStyle("MOOD"),
-        mediafile.MP3DescStorageStyle("TMOO"), 
-        mediafile.MP3DescStorageStyle("TXXX:MOOD"), 
-        mediafile.APEv2ImageStorageStyle('MOOD'),
+        mediafile.MP3StorageStyle("TMOO"), 
+        mediafile.MP3StorageStyle("TXXX:MOOD"), 
         mediafile.MP4StorageStyle('----:com.apple.iTunes:MOOD '),
+        mediafile.StorageStyle('MOOD'),
     )
     self.add_media_field("mood", field)
 
