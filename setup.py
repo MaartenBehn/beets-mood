@@ -12,7 +12,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'beets-mood-writer'
+NAME = 'beets-mood'
 DESCRIPTION = ''
 URL = 'https://github.com/MaartenBehn/beets-mood'
 EMAIL = 'maarten.behn@gmail.com'
